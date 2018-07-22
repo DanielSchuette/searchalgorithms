@@ -4,7 +4,7 @@ import (
 	"log"
 )
 
-// MergeSort makes a copy of the input slice and sorts it using a mergesort algorithm
+// MergeSort sorts a slice of ints using a mergesort algorithm
 // time complexity of O(n*logn)
 // debugging logs are commented out
 func MergeSort(in []int) []int {
