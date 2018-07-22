@@ -1,9 +1,13 @@
 package searchalgorithms
 
 // InsertionSort implements an insertion sort algorithm that takes a slice of integers
-// and returns a sorted copy of that slice without altering the input;
-// works well on 'almost' sorted slices with O(n^2)
-func InsertionSort(in []int) []int {
+// and returns a sorted copy of that slice without altering the input as well as the
+// number of iterations it took to sort the input; works well with 'almost' sorted slices with O(n^2)
+func InsertionSort(in []int) ([]int, int) {
+	// declare a sort counter that can be returned in the end
+	var sortCount int
+
+	// copy the input array
 	ss := make([]int, len(in))
 	copy(ss, in)
 
@@ -16,10 +20,11 @@ func InsertionSort(in []int) []int {
 		}
 
 		// for all other elements, iterate over all elements before the current element at ss[i]
-		// and test if that particular element ss[j] is larger than ss[i]; it that is the case,
-		// we found the position to insert the current ss[i] because we sort in ascending order
-		// and because the slice is always sorted up to the current ss[i]
 		for j := 0; j < i; j++ {
+
+			// test if that particular element ss[j] is larger than ss[i]; it that is the case,
+			// we found the position to insert the current ss[i] because we sort in ascending order
+			// and because the slice is always sorted up to the current ss[i]
 			if ss[i] < ss[j] {
 
 				// save the current element at ss[i]
@@ -33,8 +38,9 @@ func InsertionSort(in []int) []int {
 
 				// insert the value of the current element ss[i] at the right position ss[j]
 				ss[j] = tmp
+				sortCount++
 			}
 		}
 	}
-	return ss
+	return ss, sortCount
 }

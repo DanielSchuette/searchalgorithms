@@ -9,12 +9,12 @@ import (
 func main() {
 	// bubble sort, example:
 	unsorted := []int{7, 3, 6, 8, 5, 9, 1, 4, 2}
-	sortedBub := searchalgorithms.BubbleSort(unsorted)
+	sortedBub, c := searchalgorithms.BubbleSort(unsorted)
 	fmt.Printf("unsorted: %v\n", unsorted)
-	fmt.Printf("bubble sorted: %v\n", sortedBub)
+	fmt.Printf("bubble sorted: %v, iterations: %d\n", sortedBub, c)
 
 	// insertion sort, example:
-	sortedIns := searchalgorithms.InsertionSort(unsorted)
+	sortedIns, c := searchalgorithms.InsertionSort(unsorted)
 	fmt.Printf("unsorted: %v\n", unsorted)
-	fmt.Printf("insertion sorted: %v\n", sortedIns)
+	fmt.Printf("insertion sorted: %v, iterations: %d\n", sortedIns, c)
 }

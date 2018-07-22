@@ -1,8 +1,10 @@
 package searchalgorithms
 
-// BubbleSort sorts the input with time complexity 0(n^2) and returns a new, sorted array
-// it does not modify the input array because it internally makes a copy
-func BubbleSort(in []int) []int {
+// BubbleSort sorts the input with time complexity 0(n^2); returns a new, sorted slice
+// it does not modify the input slice because it internally makes a copy as well as an
+// integer value indicating how many iterations were necessary to sort the input slice
+func BubbleSort(in []int) ([]int, int) {
+	var sortCount int
 	ss := make([]int, len(in))
 	copy(ss, in)
 	swapped := true
@@ -12,8 +14,9 @@ func BubbleSort(in []int) []int {
 			if ss[i] > ss[i+1] {
 				ss[i], ss[i+1] = ss[i+1], ss[i]
 				swapped = true
+				sortCount++
 			}
 		}
 	}
-	return ss
+	return ss, sortCount
 }
