@@ -25,8 +25,8 @@ func InsertionSort(in []int) []int {
 				// save the current element at ss[i]
 				tmp := ss[i]
 
-				// shift all elements starting at ss[i-1] backwards to ss[j+1] so that the
-				// correct order is keep while making insertion possible
+				// shift all elements starting at ss[i-1] (backwards to ss[j+1]) to the right, so
+				// that the correct order is keep while making insertion possible
 				for k := i; k > j; k-- {
 					ss[k] = ss[k-1]
 				}
