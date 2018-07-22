@@ -1,13 +1,4 @@
-package main
-
-import "fmt"
-
-func main() {
-	unsorted := []int{7, 3, 6, 8, 5, 9, 1, 4, 2}
-	sorted := bubbleSort(unsorted)
-	fmt.Println("unsorted:", unsorted)
-	fmt.Println("sorted:", sorted)
-}
+package sortingalgorithms
 
 func bubbleSort(in []int) []int {
 	ss := make([]int, len(in))

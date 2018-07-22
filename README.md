@@ -1,4 +1,5 @@
-# Search Algorithms Written in Go
+# Search And Sorting Algorithms Written in Go
 A collection of search algorithms written in Go:
 
-1. Bubble Search (`bubblesearch.go`)
+1. Bubble Search (`bubblesort.go`)
+
