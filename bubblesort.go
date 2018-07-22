@@ -1,6 +1,8 @@
-package sortingalgorithms
+package searchalgorithms
 
-func bubbleSort(in []int) []int {
+// BubbleSort sorts the input with time complexity 0(n^2) and returns a new, sorted array
+// it does not modify the input array because it internally makes a copy
+func BubbleSort(in []int) []int {
 	ss := make([]int, len(in))
 	copy(ss, in)
 	swapped := true
