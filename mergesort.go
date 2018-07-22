@@ -32,17 +32,18 @@ Loop:
 			//fmt.Printf("append to end; input: %v, count: %v\n", sb, bCount)
 			returnSlice = append(returnSlice, sa[aCount:]...)
 			break Loop
-		} else if sa[aCount] < sb[bCount] {
+			// prioritize input a over input b; this might not be a desired behavior
+		} else if sa[aCount] <= sb[bCount] {
 			//fmt.Printf("append; input: %v, count: %v\n", sa, aCount)
 			returnSlice = append(returnSlice, sa[aCount])
 			aCount++
-		} else if sa[aCount] > sb[bCount] {
+		} else if sa[aCount] >= sb[bCount] {
 			//fmt.Printf("append; input: %v, count: %v\n", sb, bCount)
 			returnSlice = append(returnSlice, sb[bCount])
 			bCount++
 
 		} else {
-			log.Fatal("don't know what to do: merge got stuck with input a: %v, b: %v\n", sa, sb)
+			log.Fatalf("don't know what to do: merge got stuck with input a: %v, b: %v\n", sa, sb)
 		}
 	}
 	//fmt.Printf("returning slice: %v, len: %v\n", returnSlice, len(returnSlice))
