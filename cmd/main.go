@@ -17,4 +17,9 @@ func main() {
 	sortedIns, c := searchalgorithms.InsertionSort(unsorted)
 	fmt.Printf("unsorted: %v\n", unsorted)
 	fmt.Printf("insertion sorted: %v, iterations: %d\n", sortedIns, c)
+
+	// merge sort, example:
+	sortedMer := searchalgorithms.MergeSort(unsorted)
+	fmt.Printf("unsorted: %v\n", unsorted)
+	fmt.Printf("insertion sorted: %v\n", sortedMer)
 }
