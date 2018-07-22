@@ -21,5 +21,5 @@ func main() {
 	// merge sort, example:
 	sortedMer := searchalgorithms.MergeSort(unsorted)
 	fmt.Printf("unsorted: %v\n", unsorted)
-	fmt.Printf("insertion sorted: %v\n", sortedMer)
+	fmt.Printf("merge sorted: %v\n", sortedMer)
 }
