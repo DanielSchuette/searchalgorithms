@@ -10,7 +10,10 @@ A collection of sorting algorithms implemented in Go:
 4. Quick Sort (`quicksort.go`)
 
 
-A collection of search algorithms implemented in Go:
+A collection of search algorithms implemented in Go (with the example of finding an element in an array):
 
+1. Linear Search (`linearsearch.go`)
+
+2. Binary Search (`binarysearch.go`)
 
 
